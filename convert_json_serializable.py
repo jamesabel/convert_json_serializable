@@ -16,10 +16,10 @@ def convert_json_serializable(o):
     :param o: object to be converted to a type that is json serializable
     :return: a json serializable representation
     """
-    if hasattr(o, 'value'):
+    if isinstance(o, Enum):
         # e.g. enum.Enum
         serializable_representation = o.value
-    elif type(o) is Decimal:
+    elif isinstance(o, Decimal):
         # decimal.Decimal, both integer and floating point
         if o % 1 == 0:
             # if representable with an integer, use an integer
