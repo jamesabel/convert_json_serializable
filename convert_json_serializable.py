@@ -17,7 +17,6 @@ def convert_json_serializable(o):
     :return: a json serializable representation
     """
     if isinstance(o, Enum):
-        # e.g. enum.Enum
         serializable_representation = o.value
     elif isinstance(o, Decimal):
         # decimal.Decimal, both integer and floating point
