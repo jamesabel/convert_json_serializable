@@ -49,7 +49,7 @@ def main():
     print()
 
     print('json representation:')
-    print(json.dumps(my_animal, indent=4, default=convert_json_serializable))
+    print(json.dumps(my_animal, indent=4, default=convert_json_serializable, sort_keys=True))
 
 
 if __name__ == '__main__':
