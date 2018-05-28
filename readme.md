@@ -6,8 +6,10 @@ Convert an arbitraty Python object to a JSON serializable object.
 ## Problem ##
 Not all Python objects are serializable by the JSON module.  Writing your
 own `default` function and passing it into JSON `dump` or `dumps` allows
-you to convert your object to something that is JSON serializable using
-a method that is acceptable to you.
+you to convert your object to something that is JSON serializable.
+
+Note: This converts values but not keys.  Keys must still be strings
+(as required by JSON).
 
 ## Example Output ##
 This example uses enum.Enum and decimal.Decimal types.  The native Python
